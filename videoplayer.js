@@ -15,6 +15,11 @@ $(document).ready(function () {
   initVideo();
 
 
+  $('#player').on('click',function(){
+    togglePanel();
+  })
+
+
   $(document).keydown(function (event) {
     // alert(String.fromCharCode(event.which));
    // console.log(event.keyCode);
@@ -464,24 +469,26 @@ function decreaseVolume() {
 }
 
 
-var isPanelShowing = true;
+var isPanelShowing2 = true;
 function togglePanel() {
+
   //for mobile and tablet
   if (matchMedia("screen and (min-width: 320px) and (max-width: 767px)").matches) {
-    if (isPanelShowing) {
+    if (isPanelShowing2) {
       panelMob.fadeOut();
-      isPanelShowing = false;
+      isPanelShowing2 = false;
     } else {
       panelMob.fadeIn();
-      isPanelShowing = true;
+      isPanelShowing2 = true;
     }
-  } else {//for desktop
-    if (isPanelShowing) {
+   
+  } else {//for desktop and tablets
+    if (isPanelShowing2) {
       panelDesk.fadeOut();
-      isPanelShowing = false;
+      isPanelShowing2 = false;
     } else {
       panelDesk.fadeIn();
-      isPanelShowing = true;
+      isPanelShowing2 = true;
     }
   }
 
