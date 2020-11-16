@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player |  Designed by Xceldeveloper</title>
+  <link rel="stylesheet" type="text/css" href="videoplayer.css">
+  <link rel="stylesheet" href="materialdesignicons.min.css">
+</head>
+
+<body>
+  <div id="notification-status">
+  </div>
+  <div class="container">
+    <video id="player" preload="metadata" onclick="togglePanel()">
+    </video>
+
+    <div id="control-panel-desk" class="desktop">
+      <div id="durations">
+        <span id="curr-duration"></span>
+        <div id="seekbar">
+          <div id="fill"></div>
+          <div id="seek-thumb"></div>
+        </div>
+        <span id="total-duration"></span>
+      </div>
+      <div id="controls">
+        <button id="previous" onclick="previous()"><span class="mdi mdi-skip-previous"></span></button>
+        <button id="play-pause" onclick="playPause()"><span class="mdi mdi-play"></span></button>
+        <button id="next" onclick="next()"><span class="mdi mdi-skip-next"></span></button>
+        <button id="togglefullscreen" onclick=" toggleFull()"><span class="mdi mdi-fullscreen"></span></button>
+        <button id="screenshot" onclick="screenShot()"><span class="mdi mdi-camera-iris"></span></button>
+        <div class="volume-cover">
+          <div class="range-cover">
+            <input type="range" name="volume" id="volume-controller" min="0" max="1" value="1" step="0.02"
+              onchange="changeVolume()">
+          </div>
+          <button id="toggle-volume" onclick="toggleMutex()"><span class="mdi mdi-volume-high"></span></button>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div id="control-panel-mob" class="mobile">
+      <div id="durations">
+        <span id="curr-duration"></span>
+        <div id="seekbar-2">
+          <div id="fill"></div>
+          <div id="seek-thumb-2" ontouchmove="touchseekmove(event)" ontouchstart="touchseek(event)"
+            ontouchend="touchseekend()"></div>
+        </div>
+        <span id="total-duration"></span>
+      </div>
+
+      <div id="controls">
+        <button id="togglefullscreen" onclick="toggleFull()"><span class="mdi mdi-fullscreen"></span></button>
+        <button id="previous" onclick="previous()"><span class="mdi mdi-skip-previous"></span></button>
+        <button id="fast-rewind" onclick="skipPrevious()"><span class="mdi mdi-skip-backward"></span></button>
+        <button id="play-pause" onclick="playPause()"><span class="mdi mdi-play"></span></button>
+        <button id="fast-forward" onclick="skipForward()"><span class="mdi mdi-skip-forward"></span></button>
+        <button id="next" onclick="next()"><span class="mdi mdi-skip-next"></span></button>
+        <button id="toggle-volume" onclick="toggleMutex()"><span class="mdi mdi-volume-high"></span></button>
+      </div>
+    </div>
+  </div>
+  <div id="screenshot-background">
+    <div id="screen-shot-cover">
+      
+      <img alt="result" id="screen-shot">
+
+      <a id="download-link" href="" onclick="download_img(this);">
+        <button id="save">save</button>
+      </a>
+      <button id="cancel" onclick="cancel()">cancel</button>
+    </div>
+  </div>
+
+  
+  <canvas id="canvas"  >Hello</canvas>
+
+
+  <div id="floatplayer">
+    <video id="mini-thumb"></video>
+    <span id="mini-durr"></span>
+  </div>
+
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="videoplayer.js"></script>
+</body>
+
+</html>

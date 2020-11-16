@@ -1,0 +1,442 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.container {
+    background-color: black;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#player {
+    background-color: inherit;
+    max-width: 100%;
+    min-height: 100px;
+    min-width: 100px;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding: 0px;
+}
+
+#durations {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+
+#seekbar,
+#seekbar-2 {
+    width: 85%;
+    height: 7px;
+    margin: auto;
+    background-color: inherit;
+    border-radius: 7px;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#fill {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 7px;
+    float: left;
+    position: absolute;
+}
+
+#seek-thumb,
+#seek-thumb-2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -7px;
+    float: left;
+}
+
+#seek-thumb:hover,
+#seek-thumb-2:hover {
+    width: 17.5px;
+    height: 17.5px;
+    border: 1.5px solid white;
+}
+
+#curr-duration,
+#total-duration {
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 8px;
+    color: white;
+    display: block;
+    width: 7.5%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#controls {
+    height: 60px;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+#play-pause {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+    font-size: 35px;
+    margin: 2.5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    color: white;
+    background-color: inherit;
+
+}
+
+#previous,
+#next {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+    border: none;
+    color: white;
+    background-color: inherit;
+}
+
+#previous {
+    margin-left: 5px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+#next {
+    border-radius: 0px 8px 8px 0px;
+}
+
+#togglefullscreen,
+#screenshot {
+    height: 50px;
+    width: 50px;
+    margin-left: 5%;
+    font-size: 30px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: inherit;
+}
+
+#toggle-volume {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    margin-top: 5px;
+    border: 1px solid w;
+    border-radius: 5px;
+    margin: 5px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    background-color: inherit;
+}
+
+#play-pause:hover,
+#toggle-volume:hover,
+#screenshot:hover,
+#togglefullscreen:hover,
+#previous:hover,
+#next:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+}
+
+.volume-cover {
+    height: 100%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    right: 3%;
+    top: 0%;
+}
+
+
+#volume-controller {
+    cursor: pointer;
+    -webkit-appearance: none !important;
+    background-color: #ededed;
+    height: 4px;
+    border-radius: 4px;
+    outline: none;
+
+}
+
+.range-cover {
+    display: none;
+}
+
+
+
+#volume-controller::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+button {
+    outline-style: none;
+}
+
+#screenshot-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    display: none;
+    position: fixed;
+    top: 0%;
+}
+
+
+#screen-shot-cover {
+    max-width: 70%;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    display: block;
+
+}
+
+#screen-shot {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#save {
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#cancel {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: none;
+}
+
+#save:hover,
+#cancel:hover {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#canvas {
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+    background-color: red;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .desktop {
+        display: none;
+
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    #control-panel-mob {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        bottom: 0px;
+        left: 0%;
+    }
+
+    #controls {
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #controls button {
+        background-color: inherit;
+        color: white;
+        border: none;
+        height: 100%;
+        width: 14.28571429%;
+        font-size: 30px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #curr-duration,
+    #total-duration {
+        font-size: 12px;
+        font-family: sans-serif;
+        padding: 2px;
+        color: white;
+        display: block;
+        width: 7.5%;
+        text-align: center;
+        padding-top: 13px;
+    }
+
+    #seekbar,
+#seekbar-2 {
+    width: 78%;
+    height: 7px;
+    margin: auto;
+    background-color: inherit;
+    border-radius: 7px;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 10000px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+
+    #control-panel-desk {
+        width: 70%;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        margin: auto;
+        position: fixed;
+        bottom: 10px;
+        margin-left: 15%;
+        padding: 10px;
+
+    }
+
+
+
+
+}
+
+
+#floatplayer {
+    width: 170px;
+    height: 110px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    display: none;
+    border-radius: 3px;
+}
+
+
+#mini-thumb {
+    max-width: 100%;
+    min-height: 100px;
+    min-width: 100px;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding: 0px;
+}
+
+#mini-durr {
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#notification-status {
+    position: fixed;
+    width: auto;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+    z-index: 100;
+    font-family: sans-serif;
+    display: none;
+}
