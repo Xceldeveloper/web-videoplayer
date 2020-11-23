@@ -1,5 +1,7 @@
 # Web Video Player
 
+[screenshot](screenshot1.png)
+
 
 [demo url](https://xcelvideoplayer-web.netlify.app/)
 
