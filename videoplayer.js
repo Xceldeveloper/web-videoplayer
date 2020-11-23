@@ -593,19 +593,19 @@ panelDesk.mouseleave(function () {
   
 });
 
-$(document).ready(function(){
-  alert(
-    `Videoplayer Designed By Xceldeveloper \n
-     Controls: \n Buttons N = next , Space = pause/play , S = screenshot, F = fullscreen
-     \n
-     Arrow Buttons = Up: increase volume, Down : decrease volume \n
-     ArrowLeft: fastrewind , ArrowRight: fastfoward \n
-     ------------------------------------------------\n
-     xceldeveloper.com || xceldeveloper@gmail.com
+// $(document).ready(function(){
+//   alert(
+//     `Videoplayer Designed By Xceldeveloper \n
+//      Controls: \n Buttons N = next , Space = pause/play , S = screenshot, F = fullscreen
+//      \n
+//      Arrow Buttons = Up: increase volume, Down : decrease volume \n
+//      ArrowLeft: fastrewind , ArrowRight: fastfoward \n
+//      ------------------------------------------------\n
+//      xceldeveloper.com || xceldeveloper@gmail.com
 
-    `
-  )
-})
+//     `
+//   )
+// })
 
 
 
