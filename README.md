@@ -1,6 +1,10 @@
 # Web Video Player
 
+
 [demo url](https://xcelvideoplayer-web.netlify.app/)
+
+
+[developer's website](https://xceldeveloper.com)
 
 ### Built with HTML CSS, Vanilla JS and JQuery
 ###### controls input
